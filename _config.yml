@@ -5,9 +5,13 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br>
   Researcher, Computer vision and image processing lab, Gachon University.
   <br><br>
-  <a href="https://www.researchgate.net/profile/S-M-Nadim-Uddin">Researchgate Profile</a> 
+  <a href="https://scholar.google.com/citations?user=q3ETssUAAAAJ&hl=en">Google Scholar</a> 
   <br>
-  <a href="https://scholar.google.com/citations?user=q3ETssUAAAAJ&hl=en">Google Scholar Profile</a> 
+  <a href="https://www.researchgate.net/profile/S-M-Nadim-Uddin">Researchgate</a> 
+  <br>
+  <a href="https://www.linkedin.com/in/smnadimuddin/">LinkedIn</a> 
+  
+  
   
 theme: jekyll-theme-minimal
 # google_analytics: UA-000000-0 # your Google Analytics tracking ID here
