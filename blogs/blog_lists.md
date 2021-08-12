@@ -2,7 +2,7 @@
 
 ---
 #### Personal blogs
-<a href="/blogs/first_blog.md">Introduction</a> 
+[Introduction](/blogs/first_blog.md/)
 
 ---
 
