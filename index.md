@@ -8,6 +8,9 @@ My undergrad was from the Department of Electronics and Telecommunication Engine
 <br><br>
 My current research interests include camera sensors, 2D & 3D image processing, and deep generative models. 
 <br><br>
+
+Read my blogs here: [blogs](/blogs/)
+
 Here are some queries about me....
 <br>
 - 🔭 I’m currently working on image inpainting and event cameras.
