@@ -2,7 +2,7 @@
 
 ---
 #### Personal blogs
-[Introduction](/blogs/first_blog.md/)
+[Introduction](/blogs/first_blog.md)
 
 ---
 
