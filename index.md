@@ -24,4 +24,4 @@ My current research interests include camera sensors, 2D & 3D image processing, 
 
 ---
 
-Thank you for visiting my website. <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a>. Thanks!</p>
+Thank you for visiting my website. 
