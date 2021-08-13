@@ -14,8 +14,10 @@
 * 2016
     * SM Nadim Uddin, Nafees Mansoor, Sazzad Hossain, "Cognitive radio enabled vanet for multi-agent based intelligent traffic management system", Proceedings of the First International Conference on Advanced Information and Communication Technology (ICAICT-16). 
     * SM Nadim Uddin, Nafees Mansoor, Musfiqur Rahman, Nabeel Mohammed, Sazzad Hossain, "A framework for event anomaly detection in cognitive radio based smart community", 2016 International Workshop on Computational Intelligence (IWCI).
+
 ### Preprints
 * 2019
     * SMA Sharif, Ghulam Mujtaba, SM Uddin, "EdgeNet: A novel approach for Arabic numeral classification", arXiv preprint arXiv:1908.02254.
-##### Notes 
+
+### Notes 
 * Intuitive approach to understand the mathematics behind GAN, [link](https://www.researchgate.net/publication/332157589_Intuitive_approach_to_understand_the_mathematics_behind_GAN)
