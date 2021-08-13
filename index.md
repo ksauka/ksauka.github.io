@@ -1,4 +1,6 @@
-### Hi there 👋
+### Sayed Nadim's whiteboard
+
+#### Hi there 👋
 
 I am currently pursuing my Ph.D. in the Department of IT Convergence Engineering in Gachon University, Korea, and working as a researcher in [CVIP Lab](https://sites.google.com/site/gachoncvip/home), under the supervision of [Prof. Yong Ju Jung](https://sites.google.com/site/coolyjjung/), Gachon University. I have completed my master's from the same department (2019-2021). My master's thesis was on free-form image inpainting using global and local attention mechanisms.
 <br><br>
