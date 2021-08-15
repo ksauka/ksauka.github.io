@@ -1,4 +1,4 @@
-## Here's my list of publications. 
+## List of publications. 
 
 ### Journal publications
 * 2020
