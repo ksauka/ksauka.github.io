@@ -19,7 +19,7 @@ My current research interests include camera sensors, 2D & 3D image processing, 
 - 🌱 I’m currently learning about camera sensors and cuda programming.
 - 💬 I usually work with PyTorch. I have experiences with TensorFlow (1.x), Keras and MATLAB. 
 - 📫 How to reach me: smnadimuddin at gmail dot com
-- ⚡ Fun fact: I have recently stopped smoking. 
+<!-- - ⚡ Fun fact: I have recently stopped smoking.  -->
 
 
 Thank you for visiting my website. 
