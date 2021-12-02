@@ -1,4 +1,4 @@
-### Sayed Nadim's whiteboard
+### Kudzai Sauka's whiteboard
 
 #### Hi there 👋
 
