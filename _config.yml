@@ -1,15 +1,13 @@
-title: Sayed Nadim # your name (or website title) here
+title: Sauka Kudzai # your name (or website title) here
 logo: "/images/nadim.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  PhD student, Gachon University. 
+  Msc student, Gachon University. 
   <br>
-  Researcher, Computer vision and image processing lab, Gachon University.
-  <br><br>
-  <a href="https://scholar.google.com/citations?user=q3ETssUAAAAJ&hl=en">Google Scholar</a> 
+  Researcher, Artificial Intelligence Security  lab, Gachon University.
   <br>
-  <a href="https://www.researchgate.net/profile/S-M-Nadim-Uddin">Researchgate</a> 
+  <a href="https://www.researchgate.net/profile/Kudzai-Sauka">Researchgate</a> 
   <br>
-  <a href="https://www.linkedin.com/in/smnadimuddin/">LinkedIn</a> 
+  <a href="https://www.linkedin.com/in/kudzai-sauka/">LinkedIn</a> 
   
   
 markdown: kramdown
