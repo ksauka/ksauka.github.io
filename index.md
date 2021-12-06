@@ -2,8 +2,7 @@
 
 #### Hi there 👋
 
-I am currently pursuing Msc in the Department of Software, College of IT Convergence in Gachon University, Korea, and working as a researcher in AI Security lab Gachon University.
-I have completed my my first master's from the Department of Global Business and Etrepreneurship  (2019-2021) at the same University . My undergrad was from the Department of Business Management Science (BTech Honours Degree in Financial Engineering ) Harare Institute of Technology  (2012-2016).
+I am currently pursuing Msc in the Department of Software, College of IT Convergence in Gachon University, Korea, and working as a researcher in Researcher, AI Security (Adversarial ML/AI , Explainable AI), Gachon University.I have completed my my first master's from the Department of Global Business and Etrepreneurship  (2019-2021) at the same University . My undergrad was from the Department of Business Management Science (BTech Honours Degree in Financial Engineering ) Harare Institute of Technology  (2012-2016).
 <br><br>
 #### My current research interests include 
 - 🔭 Adversarial Machine Learning
