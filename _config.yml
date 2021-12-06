@@ -9,7 +9,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br>
   <a href="https://www.linkedin.com/in/kudzai-sauka/">LinkedIn</a> 
   <br>
-  <a href="https://t.me/ZimPython/">Telegram Data science community </a>
+  <a href="https://t.me/ZimPython/">Telegram Data science community</a>
   
 markdown: kramdown
 theme: jekyll-theme-minimal
