@@ -6,11 +6,11 @@ I am currently pursuing Msc in the Department of IT Convergence Engineering in G
 I have completed my my first master's from the Department of Global Business and Etrepreneurship  (2019-2021) at the same University . My undergrad was from the Department of Business Management Science (BTech Honours Degree in Financial Engineering ) Harare Institute of Technology  (2012-2016).
 <br><br>
 #### My current research interests include 
--1)Adversarial Machine Learning
--2)Deep learning
--3)Adversarial attack and Defense
--4)Explainable Machine Learning
--5)Explainable Artificial Intelligence (XAI). 
+- 🔭 Adversarial Machine Learning
+- 🔭 Deep learning
+- 🔭 Adversarial attack and Defense
+- 🔭 Explainable Machine Learning
+- 🔭 Explainable Artificial Intelligence (XAI). 
 <br>
 #### Basic queries about me 
 
