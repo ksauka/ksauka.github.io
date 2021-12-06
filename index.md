@@ -14,7 +14,7 @@ I am currently pursuing Msc in the Department of Software, College of IT Converg
 #### Basic queries about me 
 
 - 🔭 I’m currently working Explainable Network Instrusion Detection Systems .
-- 🌱 I’m currently learning about adversarial machine learning and Robust Depplearning PyToch programming.
+- 🌱 I’m currently learning about Adversarial Machine Learning and Robust Deep Learning PyToch programming.
 - 💬 I usually work with PyTorch. I have experiences with TensorFlow (1.x), Keras and MATLAB. 
 - 📫 How to reach me: kudzysauka at gmail dot com
 
