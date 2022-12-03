@@ -15,7 +15,7 @@ I am currently working as a researcher in AI Security (Adversarial ML/AI, Explai
 
 - 🔭 I’m currently working on Explainable Network Intrusion Detection Systems.
 - 🌱 I’m currently learning about Adversarial Machine Learning and Robust Deep Learning PyTorch programming.
-- 💬 I usually work with PyTorch. I have experience with TensorFlow (1.x), Keras, and MATLAB. 
+- 💬 I usually work with PyTorch. I have experience with TensorFlow , Keras, and MATLAB. 
 - 📫 How to reach me: kudzysauka at gmail dot com
 
 
