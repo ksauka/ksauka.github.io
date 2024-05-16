@@ -2,11 +2,13 @@ title: Sauka Kudzai # your name (or website title) here
 logo: "/images/sauka.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   Ph.D. Candidate, University of Amsterdam. 
-  <br><br>
+  <br>
   <a href="https://www.researchgate.net/profile/Kudzai-Sauka">Researchgate</a> 
+  <br>
   <a href="https://www.linkedin.com/in/kudzai-sauka-93553770/">LinkedIn</a> 
-  <a href="https://www.t.me/ZimPython/">Telegram Data science community</a>
-  <a href="https://orcid.org/0000-0002-3233-895X">ORCID Reseach profile</a>
+  <br>
+  <a href="https://orcid.org/0000-0002-3233-895X">ORCID Research profile</a>
+
 
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
