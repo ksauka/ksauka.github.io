@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kudzai Sauka — PhD Researcher in Human-Centred Explainable Conversational AI at the University of Amsterdam." />
+  <title>Kudzai Sauka — Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── RESET & BASE ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:       #08090f;
+      --deep:      #0d0f1a;
+      --surface:   #111320;
+      --border:    rgba(255,255,255,.07);
+      --paper:     #e8e4da;
+      --muted:     #7a7870;
+      --gold:      #c8a84b;
+      --gold-dim:  rgba(200,168,75,.18);
+      --amber:     #e09030;
+      --slate:     #4a6080;
+      --green:     #5a8a60;
+      --rust:      #b84830;
+      --radius:    2px;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'DM Mono', monospace;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: var(--gold); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--amber); }
+    img { max-width: 100%; display: block; }
+
+    /* ── GRAIN OVERLAY ────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none; z-index: 1000;
+      opacity: .025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 128px;
+    }
+
+    /* ── NAV ──────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      height: 60px;
+      background: rgba(8,9,15,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600;
+      letter-spacing: .04em; color: var(--paper);
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 9px; letter-spacing: .25em; text-transform: uppercase;
+      color: var(--muted); transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 100px 80px 80px;
+      gap: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; top: -20%; right: -10%;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,168,75,.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 1px; background: var(--border);
+    }
+    .hero-text { animation: fadeUp .9s ease both; }
+    .hero-eyebrow {
+      font-size: 9px; letter-spacing: .35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 32px; height: 1px;
+      background: var(--gold); opacity: .5;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5.5vw, 5.2rem);
+      font-weight: 300; line-height: 1.05;
+      letter-spacing: -.01em; color: var(--paper);
+      margin-bottom: 8px;
+    }
+    h1 strong { font-weight: 700; }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      font-weight: 300; font-style: italic;
+      color: var(--muted); margin-bottom: 28px; letter-spacing: .02em;
+    }
+    .hero-thesis {
+      font-size: 12px; line-height: 1.8;
+      color: rgba(232,228,218,.6);
+      max-width: 480px; margin-bottom: 40px;
+      border-left: 2px solid var(--gold-dim);
+      padding-left: 18px;
+    }
+    .hero-thesis em { color: var(--gold); font-style: normal; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 9px; letter-spacing: .25em; text-transform: uppercase;
+      padding: 11px 24px; border-radius: var(--radius);
+      transition: all .2s; cursor: pointer; border: none;
+    }
+    .btn-primary {
+      background: var(--gold); color: var(--ink); font-weight: 500;
+    }
+    .btn-primary:hover { background: var(--amber); color: var(--ink); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(200,168,75,.4); color: var(--gold);
+    }
+    .btn-outline:hover { border-color: var(--gold); background: var(--gold-dim); }
+
+    /* Hero photo */
+    .hero-photo { animation: fadeUp .9s .2s ease both; }
+    .photo-frame {
+      position: relative; display: inline-block;
+      width: 100%; max-width: 400px;
+    }
+    .photo-frame img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border-radius: var(--radius);
+      filter: grayscale(20%) contrast(1.05);
+    }
+    .photo-frame::before {
+      content: '';
+      position: absolute; inset: -8px -8px 8px 8px;
+      border: 1px solid rgba(200,168,75,.25);
+      border-radius: var(--radius); z-index: -1;
+    }
+    .photo-frame::after {
+      content: 'Kudzai Sauka · Amsterdam, NL';
+      position: absolute; bottom: -28px; left: 0;
+      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── SECTION BASE ─────────────────────────────────── */
+    section { padding: 100px 80px; position: relative; }
+    section + section { border-top: 1px solid var(--border); }
+    .section-label {
+      font-size: 9px; letter-spacing: .35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::after {
+      content: ''; flex: 0 0 40px; height: 1px;
+      background: var(--gold); opacity: .4;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 48px; color: var(--paper);
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .max-w { max-width: 1100px; margin: 0 auto; }
+
+    /* ── ABOUT ────────────────────────────────────────── */
+    #about { background: var(--deep); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1.6fr;
+      gap: 80px; align-items: start;
+    }
+    .about-aside {}
+    .about-stat-list { list-style: none; margin-top: 32px; }
+    .about-stat-list li {
+      display: flex; flex-direction: column;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+      font-size: 11px;
+    }
+    .about-stat-list li span:first-child {
+      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 4px;
+    }
+    .about-stat-list li span:last-child { color: var(--paper); }
+    .about-body p {
+      font-size: 13px; line-height: 1.9;
+      color: rgba(232,228,218,.72); margin-bottom: 20px;
+    }
+    .about-body p strong { color: var(--paper); font-weight: 500; }
+    .about-links {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px;
+    }
+    .about-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      padding: 8px 16px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--muted); transition: all .2s;
+    }
+    .about-link:hover { border-color: var(--gold); color: var(--gold); }
+    .about-link svg { width: 12px; height: 12px; fill: currentColor; }
+
+    /* ── RESEARCH ─────────────────────────────────────── */
+    #research { background: var(--ink); }
+    .research-filters {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px;
+    }
+    .f-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: var(--radius); cursor: pointer;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); transition: all .2s;
+    }
+    .f-btn:hover, .f-btn.active {
+      border-color: var(--gold); color: var(--gold);
+      background: var(--gold-dim);
+    }
+    .pub-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 18px;
+    }
+    .pub-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 24px 20px;
+      position: relative; overflow: hidden;
+      transition: transform .25s, border-color .25s;
+    }
+    .pub-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent, var(--gold));
+      transition: width .3s ease;
+    }
+    .pub-card:hover { transform: translateY(-3px); border-color: rgba(200,168,75,.3); }
+    .pub-card:hover::before { width: 100%; }
+    .pub-card.hidden { display: none; }
+
+    .pub-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .pub-venue {
+      font-size: 8.5px; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--accent, var(--gold)); flex-shrink: 0;
+    }
+    .pub-badge {
+      font-size: 7.5px; letter-spacing: .15em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 1px;
+      background: var(--accent, var(--gold)); color: var(--ink);
+      font-weight: 500; white-space: nowrap;
+    }
+    .pub-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-weight: 600; line-height: 1.35;
+      color: var(--paper); margin-bottom: 10px;
+    }
+    .pub-desc {
+      font-size: 11px; line-height: 1.75;
+      color: rgba(232,228,218,.5);
+    }
+    .pub-meta {
+      margin-top: 14px; padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .pub-link {
+      font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--accent, var(--gold)); margin-top: 12px; display: inline-block;
+    }
+    .pub-link:hover { color: var(--amber); }
+
+    /* ── SKILLS ───────────────────────────────────────── */
+    #skills { background: var(--deep); }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2px;
+    }
+    .skill-group {
+      background: var(--surface); padding: 28px 26px;
+      border: 1px solid var(--border);
+    }
+    .skill-group-label {
+      font-size: 9px; letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .skill-list { list-style: none; }
+    .skill-list li {
+      font-size: 11.5px; color: rgba(232,228,218,.65);
+      padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.04);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .skill-list li::before {
+      content: ''; display: block; width: 4px; height: 4px;
+      border-radius: 50%; background: var(--accent, var(--gold));
+      flex-shrink: 0; opacity: .6;
+    }
+    .skill-list li:last-child { border-bottom: none; }
+
+    /* ── CONTACT ──────────────────────────────────────── */
+    #contact {
+      background: var(--ink);
+      text-align: center;
+    }
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact-inner p {
+      font-size: 12px; line-height: 1.8;
+      color: rgba(232,228,218,.55); margin-bottom: 40px;
+    }
+    .contact-links {
+      display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+    }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 9px; letter-spacing: .22em; text-transform: uppercase;
+      padding: 10px 22px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--muted); transition: all .2s;
+    }
+    .contact-link:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer {
+      padding: 28px 80px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 9px; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── ANIMATIONS ───────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 18px; }
+      #hero { grid-template-columns: 1fr; padding: 100px 32px 60px; gap: 48px; }
+      .hero-photo { order: -1; }
+      .photo-frame { max-width: 220px; }
+      section { padding: 72px 32px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      footer { padding: 24px 32px; flex-direction: column; gap: 10px; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .pub-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <span class="nav-name">Kudzai Sauka</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">PhD Researcher · University of Amsterdam</p>
+    <h1><strong>Kudzai</strong><br>Sauka</h1>
+    <p class="hero-title">Human-Centred Explainable Conversational AI</p>
+    <p class="hero-thesis">
+      Building <em>belief-guided clarification</em> and <em>evidence-faithful KG-RAG</em> systems —
+      where AI doesn't just answer, it explains <em>why</em> it believes what it believes,
+      and asks when it doesn't know.
+    </p>
+    <div class="hero-ctas">
+      <a href="#research" class="btn btn-primary">View Research ↓</a>
+      <a href="pdf/resume.pdf" download class="btn btn-outline">Download CV ↓</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-frame">
+      <img src="images/sauka.jpg" alt="Kudzai Sauka" onerror="this.style.background='#1a1d2e';this.style.aspectRatio='3/4';this.removeAttribute('src')" />
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="max-w">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Research <em>Scientist</em><br>& PhD Candidate</h2>
+    <div class="about-grid reveal">
+      <aside class="about-aside">
+        <ul class="about-stat-list">
+          <li>
+            <span>Affiliation</span>
+            <span>Hogeschool van Amsterdam &amp; University of Amsterdam</span>
+          </li>
+          <li>
+            <span>Role</span>
+            <span>Research Scientist &amp; PhD Candidate</span>
+          </li>
+          <li>
+            <span>Research Focus</span>
+            <span>Explainable AI · Conversational AI · Knowledge Graphs</span>
+          </li>
+          <li>
+            <span>Thesis (Working Title)</span>
+            <span>Human-Centred Explainable Conversational AI: Belief-Guided Clarification and Evidence-Faithful KG-RAG</span>
+          </li>
+          <li>
+            <span>Location</span>
+            <span>Amsterdam, Netherlands</span>
+          </li>
+        </ul>
+        <div class="about-links" style="margin-top:28px;">
+          <a href="https://www.linkedin.com/in/kudzai-sauka-93553770/" target="_blank" class="about-link">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v5.59z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://orcid.org/0000-0002-3233-895X" target="_blank" class="about-link">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947-.947-.431-.947-.947.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.422h2.297c2.359 0 3.931-1.528 3.931-3.722 0-1.897-1.222-3.7-3.906-3.7h-2.322z"/></svg>
+            ORCID
+          </a>
+          <a href="https://github.com/ksauka" target="_blank" class="about-link">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:kudzaisauka@gmail.com" class="about-link">
+            ✉ Email
+          </a>
+        </div>
+      </aside>
+      <div class="about-body">
+        <p>
+          I am a <strong>PhD Researcher and Research Scientist</strong> at the Hogeschool van Amsterdam,
+          pursuing my doctorate at the University of Amsterdam. My research sits at the intersection of
+          <strong>Explainable AI</strong>, <strong>Conversational Agents</strong>, and
+          <strong>Knowledge Graph-Augmented Retrieval</strong>.
+        </p>
+        <p>
+          My thesis develops a layered explainability architecture for conversational AI:
+          <strong>Layer 1</strong> uses Dempster-Shafer Theory (DST) to model belief-guided clarification —
+          building systems that track uncertainty over user intent and ask targeted questions rather than guessing.
+          <strong>Layer 2</strong> introduces graph-conditioned keyphrase rationales and counterfactual faithfulness
+          auditing for KG-RAG pipelines, ensuring that explanations are not merely plausible but
+          <strong>causally grounded</strong>.
+        </p>
+        <p>
+          Across this work, I apply a unified evaluation spine assessing
+          <strong>faithfulness</strong> (perturbation-based), <strong>usability</strong>
+          (verification accuracy and time), and <strong>reliance calibration</strong>
+          (appropriate trust under transparency and anthropomorphic framing conditions).
+          I am also building <strong>AnthroKit</strong>, a reusable design system for
+          controlled anthropomorphic tone manipulation in experimental chatbot research.
+        </p>
+        <p>
+          Looking ahead, I am extending this work into <strong>agentic AI settings</strong> —
+          framing DST belief-modeling as infrastructure for agent uncertainty tracking and
+          clarification in multi-agent pipelines (LangGraph, AutoGen, MCP).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH ── -->
+<section id="research">
+  <div class="max-w">
+    <p class="section-label">Publications &amp; Projects</p>
+    <h2 class="section-title">Research <em>Portfolio</em></h2>
+
+    <div class="research-filters">
+      <button class="f-btn active" data-filter="all">All</button>
+      <button class="f-btn" data-filter="accepted">Accepted</button>
+      <button class="f-btn" data-filter="submitted">Submitted</button>
+      <button class="f-btn" data-filter="wip">In Progress</button>
+      <button class="f-btn" data-filter="xai">XAI</button>
+      <button class="f-btn" data-filter="kg">Knowledge Graphs</button>
+      <button class="f-btn" data-filter="dst">DST / Intent</button>
+    </div>
+
+    <div class="pub-grid" id="pubGrid"></div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="max-w">
+    <p class="section-label">Expertise</p>
+    <h2 class="section-title reveal">Skills &amp; <em>Tools</em></h2>
+    <div class="skills-grid reveal">
+
+      <div class="skill-group" style="--accent: var(--gold)">
+        <p class="skill-group-label">Explainable AI</p>
+        <ul class="skill-list">
+          <li>Dempster-Shafer Theory (DST)</li>
+          <li>Counterfactual Explanation (SMILE-CF)</li>
+          <li>LIME-style Local Surrogates</li>
+          <li>GraphRAG Retrieval Rationales</li>
+          <li>XAI Evaluation Frameworks</li>
+          <li>Trust &amp; Reliance Calibration</li>
+        </ul>
+      </div>
+
+      <div class="skill-group" style="--accent: #6a9fbf">
+        <p class="skill-group-label" style="color:#6a9fbf">Knowledge Graphs &amp; Semantic Web</p>
+        <ul class="skill-list" style="--accent:#6a9fbf">
+          <li>Ontology Engineering (OWL, RDF)</li>
+          <li>Neo4j / Graph Databases</li>
+          <li>GraphRAG Pipelines</li>
+          <li>Modular Ontology Design (OPLa)</li>
+          <li>Entity &amp; Relation Extraction</li>
+          <li>Semantic Search</li>
+        </ul>
+      </div>
+
+      <div class="skill-group" style="--accent: var(--green)">
+        <p class="skill-group-label" style="color:var(--green)">NLP &amp; Conversational AI</p>
+        <ul class="skill-list" style="--accent:var(--green)">
+          <li>Intent Classification</li>
+          <li>Dialogue State Tracking</li>
+          <li>Proactive Clarification</li>
+          <li>LLM Prompting &amp; Fine-tuning</li>
+          <li>Transformer Architectures</li>
+          <li>Task-Oriented Dialogue Systems</li>
+        </ul>
+      </div>
+
+      <div class="skill-group" style="--accent: var(--amber)">
+        <p class="skill-group-label" style="color:var(--amber)">Research Methods</p>
+        <ul class="skill-list" style="--accent:var(--amber)">
+          <li>Bibliometric Analysis (VOSviewer)</li>
+          <li>Vignette Experiments</li>
+          <li>fsQCA (Fuzzy Set QCA)</li>
+          <li>SPSS / STATA</li>
+          <li>Human-Subject Study Design</li>
+          <li>Science Mapping</li>
+        </ul>
+      </div>
+
+      <div class="skill-group" style="--accent: var(--rust)">
+        <p class="skill-group-label" style="color:var(--rust)">Engineering &amp; Tools</p>
+        <ul class="skill-list" style="--accent:var(--rust)">
+          <li>Python (PyTorch, scikit-learn)</li>
+          <li>Flask / FastAPI</li>
+          <li>LangChain / LangGraph</li>
+          <li>LaTeX / Overleaf</li>
+          <li>Git / GitHub</li>
+          <li>Neo4j, PostgreSQL</li>
+        </ul>
+      </div>
+
+      <div class="skill-group" style="--accent: #9a7abf">
+        <p class="skill-group-label" style="color:#9a7abf">Design &amp; UX Research</p>
+        <ul class="skill-list" style="--accent:#9a7abf">
+          <li>AnthroKit (Anthropomorphic Design)</li>
+          <li>Conversational UX Design</li>
+          <li>Human-Centred Design</li>
+          <li>Informed Consent &amp; Ethics</li>
+          <li>User Study Facilitation</li>
+          <li>Prototype Evaluation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="max-w">
+    <div class="contact-inner reveal">
+      <p class="section-label" style="justify-content:center">Contact</p>
+      <h2 class="section-title">Let's <em>Connect</em></h2>
+      <p>
+        I'm always open to conversations about XAI, conversational AI, knowledge graphs,
+        or agentic systems. Reach out for collaborations, speaking invitations, or just to talk research.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:kudzaisauka@gmail.com" class="contact-link">✉ kudzaisauka@gmail.com</a>
+        <a href="https://www.linkedin.com/in/kudzai-sauka-93553770/" target="_blank" class="contact-link">LinkedIn ↗</a>
+        <a href="https://orcid.org/0000-0002-3233-895X" target="_blank" class="contact-link">ORCID ↗</a>
+        <a href="https://github.com/ksauka" target="_blank" class="contact-link">GitHub ↗</a>
+        <a href="pdf/resume.pdf" download class="contact-link">⬇ Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>© 2025 Kudzai Sauka</span>
+</footer>
+
+<script>
+// ── Publication Data ────────────────────────────────────────────────────────
+const pubs = [
+  {
+    status: "accepted", tags: ["accepted","xai"],
+    accent: "#c8a84b",
+    venue: "Journal of Consumer Marketing 2025",
+    badge: "Accepted",
+    title: "Anthropomorphism and Transparency in Generative AI Marketing",
+    desc: "Models how perceived explainability and anthropomorphism jointly shape trust via social presence. fsQCA reveals multiple viable routes to adoption intent — equifinality as a core finding.",
+    meta: "Q1 Journal · 2025",
+    link: null
+  },
+  {
+    status: "accepted", tags: ["accepted","xai"],
+    accent: "#c8a84b",
+    venue: "XAI 2025",
+    badge: "Accepted",
+    title: "A Nexus of Explainability and Anthropomorphism in AI-Chatbots",
+    desc: "Investigates how explainability and anthropomorphic design jointly influence trust and adoption intent across industry contexts. Presented at XAI 2025.",
+    meta: "Conference Paper · 2025",
+    link: null
+  },
+  {
+    status: "accepted", tags: ["accepted","dst"],
+    accent: "#c8a84b",
+    venue: "ProActLLM @ CIKM 2025",
+    badge: "Accepted",
+    title: "Interactive Intent Classification with Belief-Based Proactive Clarification",
+    desc: "Frames clarification question generation as a DST belief-management task. The system tracks mass distributions over the intent hierarchy and triggers clarification when belief entropy exceeds a threshold.",
+    meta: "Workshop Paper · CIKM 2025",
+    link: null
+  },
+  {
+    status: "accepted", tags: ["accepted","kg"],
+    accent: "#c8a84b",
+    venue: "ISWC 2025 Industry Track",
+    badge: "Accepted",
+    title: "Building Hierarchy-Aware Knowledge Graphs (KPN)",
+    desc: "Modular ontology engineering that preserves conceptual hierarchy for scalable KG construction. Provides the semantic infrastructure layer for KG-RAG pipelines in e-commerce and semantic search.",
+    meta: "Industry Track · ISWC 2025",
+    link: null
+  },
+  {
+    status: "submitted", tags: ["submitted","xai"],
+    accent: "#6a9fbf",
+    venue: "ACM DIS 2026",
+    badge: "Submitted",
+    title: "AnthroKit: A Reusable Design System for Anthropomorphic Chatbot Research",
+    desc: "Under review. Details available upon publication.",
+    meta: "Submitted 2025",
+    link: null
+  },
+  {
+    status: "wip", tags: ["wip","dst"],
+    accent: "#9a7abf",
+    venue: "UAI 2026",
+    badge: "In Progress",
+    title: "Belief-Guided Proactive Clarification in Dialogue — UAI Extension",
+    desc: "Work in progress. Details available upon request.",
+    meta: "WIP · Target UAI 2026",
+    link: null
+  },
+  {
+    status: "wip", tags: ["wip","xai","kg"],
+    accent: "#9a7abf",
+    venue: "Technovation / TOIS",
+    badge: "In Progress",
+    title: "Designing for Trust: KG-Conditioned Explanations for Accountable Conversational AI",
+    desc: "Work in progress. Details available upon request.",
+    meta: "WIP · Target Technovation/TOIS",
+    link: null
+  },
+  {
+    status: "wip", tags: ["wip","xai","kg"],
+    accent: "#9a7abf",
+    venue: "Information Sciences / TOIS",
+    badge: "In Progress",
+    title: "Beyond Correct Citations in KG-RAG: SMILE-CF Faithfulness Auditing",
+    desc: "Work in progress. Details available upon request.",
+    meta: "WIP · Target Information Sciences",
+    link: null
+  },
+  {
+    status: "wip", tags: ["wip","kg"],
+    accent: "#9a7abf",
+    venue: "JBR Insights",
+    badge: "In Progress",
+    title: "GraphRAG as a Research Copilot for Cumulative Theory Development",
+    desc: "Work in progress. Details available upon request.",
+    meta: "WIP · Target JBR Insights",
+    link: null
+  },
+  {
+    status: "wip", tags: ["wip","xai"],
+    accent: "#9a7abf",
+    venue: "Entrepreneurship Theory & Practice",
+    badge: "In Progress",
+    title: "AI & Entrepreneurship: A Bibliometric Analysis",
+    desc: "Work in progress. Details available upon request.",
+    meta: "WIP · Target ETP",
+    link: null
+  },
+];
+
+// ── Render pubs ────────────────────────────────────────────────────────────
+const grid = document.getElementById('pubGrid');
+pubs.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'pub-card reveal';
+  card.dataset.tags = p.tags.join(' ');
+  card.style.setProperty('--accent', p.accent);
+  card.style.animationDelay = `${i * 0.05}s`;
+  card.innerHTML = `
+    <div class="pub-header">
+      <span class="pub-venue">${p.venue}</span>
+      <span class="pub-badge">${p.badge}</span>
+    </div>
+    <h3 class="pub-title">${p.title}</h3>
+    <p class="pub-desc">${p.desc}</p>
+    <p class="pub-meta">${p.meta}</p>
+    ${p.link ? `<a href="${p.link}" class="pub-link" target="_blank">Read Paper ↗</a>` : ''}
+  `;
+  grid.appendChild(card);
+});
+
+// ── Filter ─────────────────────────────────────────────────────────────────
+document.querySelectorAll('.f-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.pub-card').forEach(card => {
+      const tags = card.dataset.tags;
+      card.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+    });
+  });
+});
+
+// Scroll reveal on page elements
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
