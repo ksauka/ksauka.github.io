@@ -701,9 +701,10 @@ const pubs = [
     venue: "ProActLLM @ CIKM 2025",
     badge: "Workshop · 2025",
     title: "Interactive Intent Classification with Belief-Based Proactive Clarification",
-    desc: "Proposes a belief-based framework for interactive intent classification in task-oriented dialogue with hierarchical taxonomies. A base classifier produces leaf-level scores interpreted as mass functions enabling belief propagation to internal nodes. When belief in the most specific intent is insufficient, the system proactively poses a short clarification question targeted at the lowest common ancestor of top candidates. User replies are folded back using an LCA-specialised variant of Dempster's rule, iteratively refining belief until a single intent is selected. Across five benchmarks, the approach yields consistent accuracy gains while imposing fewer than one clarification question per query on average. ProActLLM Workshop, CIKM 2025, Seoul.",
+    desc: "Proposes a belief-based framework for interactive intent classification in task-oriented dialogue with hierarchical taxonomies. A base classifier produces leaf-level scores interpreted as mass functions enabling belief propagation to internal nodes. When belief in the most specific intent is insufficient, the system proactively poses a short clarification question targeted at the lowest common ancestor of top candidates. User replies are folded back using an LCA-specialised variant of Dempster's rule, iteratively refining belief until a single intent is selected. Across five benchmarks, the approach yields consistent accuracy gains while imposing fewer than one clarification question per query on average. Accepted and presented at the ProActLLM Workshop, CIKM 2025, Seoul.",
     meta: "CIKM 2025 · ProActLLM Workshop",
-    link: null
+    link: "https://proactllm.github.io/",
+    linkLabel: "Workshop Record ↗"
   },
   {
     tags: ["kg"],
@@ -747,6 +748,18 @@ const pubs = [
     meta: "Q2 · Applied Sciences · 2022 · doi:10.3390/app12136451",
     link: "https://doi.org/10.3390/app12136451"
   },
+  // ── 2022 (Conference) ───────────────────────────────────────────────────────
+  {
+    tags: ["security", "xai"],
+    accent: "#c8a84b",
+    venue: "KIIS Autumn Conference 2022",
+    badge: "Conference · 2022",
+    title: "Bayesian Stackelberg Adversarial Games Towards Robust Deep Learning-Based Network Intrusion Systems",
+    desc: "Implements a Bayesian Stackelberg Adversarial Game as a solution to the vulnerability of deep learning-based network intrusion systems against adversarial attacks. Investigates regression problems in which an adversary has partial control over the data generation process and the learner holds a Bayesian prior over the adversary's objective. Learner and adversary have opposing but not mutually exclusive goals. The Bayesian Stackelberg Adversarial model is found to outperform an adversarially unaware baseline model. Accepted and presented at the KIIS Autumn Conference 2022, 32(2), p. 90 (PS44).",
+    meta: "KIIS Autumn Conference · 2022 · Vol. 32(2) · p. 90 (PS44)",
+    link: "https://kiis.or.kr/data/conf/KIIS%202022%EB%85%84%EB%8F%84%20%EC%B6%94%EA%B3%84%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EB%B6%81.pdf",
+    linkLabel: "Conference Programme ↗"
+  },
   // ── 2017 ────────────────────────────────────────────────────────────────────
   {
     tags: ["finance"],
@@ -755,8 +768,8 @@ const pubs = [
     badge: "Journal · 2017",
     title: "Modelling the Sensitivity of Zimbabwean Commercial Banks' Non-Performing Loans to Macroeconomic Variables",
     desc: "Models the macroeconomic determinants of non-performing loan (NPL) sensitivity in Zimbabwean commercial banks. Identifies which macroeconomic variables — including GDP growth, inflation, and exchange rate movements — have the greatest influence on credit risk in a sub-Saharan African banking context.",
-    meta: "IJEBO · 2017",
-    link: null
+    meta: "IJEBO · 2017 · doi:10.11648/j.ijebo.20170504.12",
+    link: "https://www.sciencepublishinggroup.com/article/10.11648/j.ijebo.20170504.12"
   },
 ];
 
@@ -775,7 +788,7 @@ pubs.forEach((p, i) => {
     <h3 class="pub-title">${p.title}</h3>
     <p class="pub-desc">${p.desc}</p>
     <p class="pub-meta">${p.meta}</p>
-    ${p.link ? `<a href="${p.link}" class="pub-link" target="_blank">Read Paper ↗</a>` : ''}
+    ${p.link ? `<a href="${p.link}" class="pub-link" target="_blank">${p.linkLabel || 'Read Paper ↗'}</a>` : ''}
   `;
   grid.appendChild(card);
   revealObserver.observe(card);
