@@ -408,6 +408,7 @@
     <div class="hero-ctas">
       <a href="#research" class="btn btn-primary">View Research ↓</a>
       <a href="pdf/resume.pdf" download class="btn btn-outline">Download CV ↓</a>
+      <button id="downloadSiteBtn" class="btn btn-outline" style="display:none">Download Site ↓</button>
     </div>
   </div>
   <div class="hero-photo">
@@ -459,7 +460,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
             GitHub
           </a>
-          <a href="mailto:kudzaisauka@gmail.com" class="about-link">
+          <a href="/cdn-cgi/l/email-protection#5c37293826252f3d29373d1c3b313d3530723f3331" class="about-link">
             ✉ Email
           </a>
         </div>
@@ -467,30 +468,31 @@
       <div class="about-body">
         <p>
           I am a <strong>PhD Researcher and Research Scientist</strong> at the Hogeschool van Amsterdam,
-          pursuing my doctorate at the University of Amsterdam. My research sits at the intersection of
-          <strong>Explainable AI</strong>, <strong>Conversational Agents</strong>, and
-          <strong>Knowledge Graph-Augmented Retrieval</strong>.
+          pursuing my doctorate at the University of Amsterdam. My research is in
+          <strong>Human-Centred Explainable Conversational AI</strong>, with a focus on how AI systems
+          should manage commitment under uncertainty to support <strong>appropriate human reliance</strong>.
         </p>
         <p>
-          My thesis develops a layered explainability architecture for conversational AI:
-          <strong>Layer 1</strong> uses Dempster-Shafer Theory (DST) to model belief-guided clarification —
-          building systems that track uncertainty over user intent and ask targeted questions rather than guessing.
-          <strong>Layer 2</strong> introduces graph-conditioned keyphrase rationales and counterfactual faithfulness
-          auditing for KG-RAG pipelines, ensuring that explanations are not merely plausible but
-          <strong>causally grounded</strong>.
+          The central problem my thesis addresses is premature commitment: a conversational system can
+          answer before its interpretation of user intent is sufficiently resolved, and a human can accept
+          an AI recommendation before independent evaluation has occurred. As part of a collaborative
+          research programme, my doctoral work investigates the conditions under which
+          <strong>conversational explanation</strong> delays, supports, or justifies commitment on both
+          sides of this interaction.
         </p>
         <p>
-          Across this work, I apply a unified evaluation spine assessing
-          <strong>faithfulness</strong> (perturbation-based), <strong>usability</strong>
-          (verification accuracy and time), and <strong>reliance calibration</strong>
-          (appropriate trust under transparency and anthropomorphic framing conditions).
-          I am also building <strong>AnthroKit</strong>, a reusable design system for
-          controlled anthropomorphic tone manipulation in experimental chatbot research.
+          My published work investigates how perceived explainability and anthropomorphic design jointly
+          shape trust through social interpretation, and how a <strong>Dempster-Shafer belief state</strong>
+          can serve as an interrogative gate — blocking answer generation when epistemic uncertainty is
+          too high and prompting the system to seek clarification instead. A complementary behavioural
+          study examines whether <strong>independent judgement and cognitive forcing</strong> before
+          recommendation exposure improve correctness-sensitive reliance.
         </p>
         <p>
-          Looking ahead, I am extending this work into <strong>agentic AI settings</strong> —
-          framing DST belief-modeling as infrastructure for agent uncertainty tracking and
-          clarification in multi-agent pipelines (LangGraph, AutoGen, MCP).
+          I am currently extending this work toward an integrated <strong>HC-XCAI reference architecture</strong>
+          that combines AI-side interrogative gating, evidence-grounded retrieval, source provenance, and
+          human-side commitment gates — with longer-term interest in interactive reasoning under uncertainty
+          in agentic AI settings.
         </p>
       </div>
     </div>
@@ -500,17 +502,16 @@
 <!-- ── RESEARCH ── -->
 <section id="research">
   <div class="max-w">
-    <p class="section-label">Publications &amp; Projects</p>
-    <h2 class="section-title">Research <em>Portfolio</em></h2>
+    <p class="section-label">Published Work</p>
+    <h2 class="section-title">Research <em>Publications</em></h2>
 
     <div class="research-filters">
       <button class="f-btn active" data-filter="all">All</button>
-      <button class="f-btn" data-filter="accepted">Accepted</button>
-      <button class="f-btn" data-filter="submitted">Submitted</button>
-      <button class="f-btn" data-filter="wip">In Progress</button>
       <button class="f-btn" data-filter="xai">XAI</button>
       <button class="f-btn" data-filter="kg">Knowledge Graphs</button>
       <button class="f-btn" data-filter="dst">DST / Intent</button>
+      <button class="f-btn" data-filter="security">AI Security</button>
+      <button class="f-btn" data-filter="finance">Finance</button>
     </div>
 
     <div class="pub-grid" id="pubGrid"></div>
@@ -537,12 +538,12 @@
       </div>
 
       <div class="skill-group" style="--accent: #6a9fbf">
-        <p class="skill-group-label" style="color:#6a9fbf">Knowledge Graphs &amp; Semantic Web</p>
+        <p class="skill-group-label" style="color:#6a9fbf">Knowledge Graphs &amp; Retrieval</p>
         <ul class="skill-list" style="--accent:#6a9fbf">
-          <li>Ontology Engineering (OWL, RDF)</li>
+          <li>Ontology Engineering</li>
           <li>Neo4j / Graph Databases</li>
           <li>GraphRAG Pipelines</li>
-          <li>Modular Ontology Design (OPLa)</li>
+          <li>Source Provenance &amp; Citation</li>
           <li>Entity &amp; Relation Extraction</li>
           <li>Semantic Search</li>
         </ul>
@@ -611,7 +612,7 @@
         or agentic systems. Reach out for collaborations, speaking invitations, or just to talk research.
       </p>
       <div class="contact-links">
-        <a href="mailto:kudzaisauka@gmail.com" class="contact-link">✉ kudzaisauka@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#abc0decfd1d2d8cadec0caebccc6cac2c785c8c4c6" class="contact-link">✉ <span class="__cf_email__" data-cfemail="23485647595a504256484263444e424a4f0d404c4e">[email&#160;protected]</span></a>
         <a href="https://www.linkedin.com/in/kudzai-sauka-93553770/" target="_blank" class="contact-link">LinkedIn ↗</a>
         <a href="https://orcid.org/0000-0002-3233-895X" target="_blank" class="contact-link">ORCID ↗</a>
         <a href="https://github.com/ksauka" target="_blank" class="contact-link">GitHub ↗</a>
@@ -624,109 +625,137 @@
 <!-- ── FOOTER ── -->
 <footer>
   <span>© 2025 Kudzai Sauka</span>
+  <span>University of Amsterdam · Amsterdam, Netherlands</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── Scroll Reveal Observer (defined first so pub cards can use it) ──────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      // also handle inline-style reveals (pub cards)
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+
 // ── Publication Data ────────────────────────────────────────────────────────
 const pubs = [
+  // ── 2026 ────────────────────────────────────────────────────────────────────
   {
-    status: "accepted", tags: ["accepted","xai"],
+    tags: ["xai"],
     accent: "#c8a84b",
-    venue: "Journal of Consumer Marketing 2025",
-    badge: "Accepted",
-    title: "Anthropomorphism and Transparency in Generative AI Marketing",
-    desc: "Models how perceived explainability and anthropomorphism jointly shape trust via social presence. fsQCA reveals multiple viable routes to adoption intent — equifinality as a core finding.",
-    meta: "Q1 Journal · 2025",
+    venue: "HAI 2026 — ACM/IEEE",
+    badge: "Conference · 2026",
+    title: "Human Oversight in Agentic AI: Explainability, Anthropomorphism, and the Boundary of Cognitive Forcing",
+    desc: "Explainability helps users assess the evidence behind an AI recommendation, but it may not change decisions when that evidence goes unexamined. This paper operationalises cognitive forcing as Human Intervention Checkpoints (HICs), requiring users to specify what the assistant should examine before it recommends. A randomised 2×2×2 hiring experiment (N=211) finds that advancement was not associated with explanatory provenance, anthropomorphic delivery, HIC presence, or opening source documents — identifying a boundary of cognitive forcing where influence over what the agent evaluated did not reliably carry through to the final human decision.",
+    meta: "HAI 2026 · ACM/IEEE",
     link: null
   },
   {
-    status: "accepted", tags: ["accepted","xai"],
+    tags: ["xai"],
     accent: "#c8a84b",
-    venue: "XAI 2025",
-    badge: "Accepted",
+    venue: "XAI 2026 — Springer (Late-Breaking Work)",
+    badge: "Conference · 2026",
+    title: "Human-Centred Explainable Conversational AI: Explainability, Persona Adaptation, and Entrepreneurial Agency",
+    desc: "Doctoral Consortium and late-breaking work presentation situating the thesis within the broader XAI landscape. Frames the dissertation's core contribution — managing commitment under uncertainty in conversational AI — and its connections to persona adaptation and human agency in AI-mediated entrepreneurial settings.",
+    meta: "XAI 2026 · Springer",
+    link: null
+  },
+  {
+    tags: ["xai"],
+    accent: "#c8a84b",
+    venue: "ICCCI 2026 — IEEE",
+    badge: "Conference · 2026",
+    title: "Style-Parameter Calibration for Anthropomorphic Tone Control in Conversational Decision-Support Agents",
+    desc: "Presents AnthroKit, a style-parameter calibration architecture representing anthropomorphic tone as six bounded parameters (warmth, empathy, formality, hedging, self-reference, emoji) with explicit realisation rules and a personality-adaptive calibration model. Big Five trait scores are mapped to per-parameter deltas via a weighted linear model. A 3×2 between-subjects experiment (n=126) shows that AnthroKit significantly attenuates perceived anthropomorphism under high-preset conditions, while AgentHumanness strongly predicts Social Presence Index via a first-stage moderated mediation mechanism. 8th International Conference on Computer Communication and the Internet (ICCCI), IEEE, 2026.",
+    meta: "ICCCI 2026 · IEEE",
+    link: "https://ieeexplore.ieee.org/abstract/document/11666502/"
+  },
+  // ── 2025 ────────────────────────────────────────────────────────────────────
+  {
+    tags: ["xai"],
+    accent: "#c8a84b",
+    venue: "Journal of Consumer Marketing",
+    badge: "Journal · Q1 · 2025",
+    title: "Anthropomorphism and Transparency Interplay on Consumer Behaviour in Generative AI-Driven Marketing Communication",
+    desc: "Investigates the impact of Generative AI-produced marketing communication on consumer trust and behavioural intentions. Anthropomorphism enhances purchase intention directly and indirectly through perceived social presence and trust, while transparency weakens the effect of anthropomorphism on social presence. Marketing scenarios (chatbot vs. poster) influence the strength of these effects, with chatbots amplifying the mediating role of social presence and trust. Journal of Consumer Marketing, 42(4), 512–536 (Q1, H-Index 122). 59 citations.",
+    meta: "Q1 · JCM · 2025 · doi:10.1108/jcm-04-2024-6806",
+    link: "https://emerald.com/insight/content/doi/10.1108/jcm-04-2024-6806/full/html"
+  },
+  {
+    tags: ["xai"],
+    accent: "#c8a84b",
+    venue: "XAI 2025 — Springer",
+    badge: "Conference · 2025",
     title: "A Nexus of Explainability and Anthropomorphism in AI-Chatbots",
-    desc: "Investigates how explainability and anthropomorphic design jointly influence trust and adoption intent across industry contexts. Presented at XAI 2025.",
-    meta: "Conference Paper · 2025",
-    link: null
+    desc: "Examines how explainability and anthropomorphism shape consumer trust in AI chatbots and influence adoption across high-stakes (Finance) and low-stakes (Retail) industries. Explainability strengthens consumer trust, which drives adoption, while chatbots that are both explainable and anthropomorphic generate stronger trust — though anthropomorphism's influence differs by industry. Consumer trust remains the strongest predictor of AI chatbot adoption across both contexts. Springer, World Conference on Explainable AI 2025, pp. 115–138.",
+    meta: "XAI 2025 · Springer",
+    link: "https://link.springer.com/chapter/10.1007/978-3-032-08317-3_6"
   },
   {
-    status: "accepted", tags: ["accepted","dst"],
+    tags: ["dst"],
     accent: "#c8a84b",
     venue: "ProActLLM @ CIKM 2025",
-    badge: "Accepted",
+    badge: "Workshop · 2025",
     title: "Interactive Intent Classification with Belief-Based Proactive Clarification",
-    desc: "Frames clarification question generation as a DST belief-management task. The system tracks mass distributions over the intent hierarchy and triggers clarification when belief entropy exceeds a threshold.",
-    meta: "Workshop Paper · CIKM 2025",
+    desc: "Proposes a belief-based framework for interactive intent classification in task-oriented dialogue with hierarchical taxonomies. A base classifier produces leaf-level scores interpreted as mass functions enabling belief propagation to internal nodes. When belief in the most specific intent is insufficient, the system proactively poses a short clarification question targeted at the lowest common ancestor of top candidates. User replies are folded back using an LCA-specialised variant of Dempster's rule, iteratively refining belief until a single intent is selected. Across five benchmarks, the approach yields consistent accuracy gains while imposing fewer than one clarification question per query on average. ProActLLM Workshop, CIKM 2025, Seoul.",
+    meta: "CIKM 2025 · ProActLLM Workshop",
     link: null
   },
   {
-    status: "accepted", tags: ["accepted","kg"],
+    tags: ["kg"],
     accent: "#c8a84b",
-    venue: "ISWC 2025 Industry Track",
-    badge: "Accepted",
-    title: "Building Hierarchy-Aware Knowledge Graphs (KPN)",
-    desc: "Modular ontology engineering that preserves conceptual hierarchy for scalable KG construction. Provides the semantic infrastructure layer for KG-RAG pipelines in e-commerce and semantic search.",
-    meta: "Industry Track · ISWC 2025",
-    link: null
+    venue: "ISWC 2025 — Industry Track",
+    badge: "Conference · 2025",
+    title: "Building Hierarchy-Aware Knowledge Graphs: Ontology-Grounded Triple Extraction with LLMs",
+    desc: "Introduces DERMC (Document-Preprocessing-Extract-Resolve-MergeCanonicalize), a hierarchy-aware framework for constructing knowledge graphs using large language models. Addresses the limitations of naive LLM prompting — redundancy, cognitive overload, and cross-language inconsistencies — by integrating multilingual coreference resolution, hierarchical document parsing, and a RAG-MCP-inspired schema retriever that dynamically narrows candidate relations per document context. Developed within the NWO LESSEN consortium in collaboration with KPN. ISWC 2025, Industry/Doctoral Consortium/Posters/Demos Track.",
+    meta: "ISWC 2025 · Industry Track",
+    link: "https://ceur-ws.org/Vol-4085/paper13.pdf"
+  },
+  // ── 2024 ────────────────────────────────────────────────────────────────────
+  {
+    tags: ["finance"],
+    accent: "#7aaa8a",
+    venue: "International Journal of Financial Studies",
+    badge: "Journal · Q2 · 2024",
+    title: "Dynamic Capital Structure Adjustment: Firm-Specific and Macroeconomic Factors in Korean Firms",
+    desc: "Examines 271 non-financial firms on the Korean Stock Exchange from 1995–2021 using dynamic panel data and GMM estimation. Finds that capital structure decisions are more influenced by internal factors during economic stability and by external macroeconomic conditions during downturns, with faster leverage adjustment in stable periods.",
+    meta: "IJFS · Q2 · 2024 · doi:10.3390/ijfs12010026",
+    link: "https://ideas.repec.org/a/gam/jijfss/v12y2024i1p26-d1355245.html"
   },
   {
-    status: "submitted", tags: ["submitted","xai"],
-    accent: "#6a9fbf",
-    venue: "ACM DIS 2026",
-    badge: "Submitted",
-    title: "AnthroKit: A Reusable Design System for Anthropomorphic Chatbot Research",
-    desc: "Under review. Details available upon publication.",
-    meta: "Submitted 2025",
-    link: null
+    tags: ["finance"],
+    accent: "#7aaa8a",
+    venue: "Journal of Risk and Financial Management",
+    badge: "Journal · Q2 · 2024",
+    title: "Dynamics of Dividend Payout in Korean Corporations: A Panel Analysis Across Economic Cycles",
+    desc: "Comprehensive panel analysis of dividend payout dynamics across Korean corporations, examining how firm characteristics and macroeconomic cycle phases interact to determine dividend policy. Uses dynamic panel methods to identify cycle-dependent adjustment behaviour.",
+    meta: "JRFM · Q2 · 2024",
+    link: "https://www.mdpi.com/1911-8074/17/12/564"
   },
+  // ── 2022 ────────────────────────────────────────────────────────────────────
   {
-    status: "wip", tags: ["wip","dst"],
-    accent: "#9a7abf",
-    venue: "UAI 2026",
-    badge: "In Progress",
-    title: "Belief-Guided Proactive Clarification in Dialogue — UAI Extension",
-    desc: "Work in progress. Details available upon request.",
-    meta: "WIP · Target UAI 2026",
-    link: null
+    tags: ["security", "xai"],
+    accent: "#c8a84b",
+    venue: "Applied Sciences",
+    badge: "Journal · Q2 · 2022",
+    title: "Adversarial Robust and Explainable Network Intrusion Detection Systems Based on Deep Learning",
+    desc: "Develops an adversarial robust and explainable network intrusion detection system by applying adversarial training combined with explainable AI techniques. In experiments with the NSL-KDD dataset, the PGD adversarial-trained model achieved ROC-AUC of 0.87 and demonstrated superior robustness — the FGSM attack caused no reduction in PGD model performance, while the DeepFool attack caused only a 9.20% reduction. SHAP and LIME are applied to interpret model decisions and identify vulnerability patterns under adversarial perturbation. Applied Sciences, 12(13), 6451. 84 citations.",
+    meta: "Q2 · Applied Sciences · 2022 · doi:10.3390/app12136451",
+    link: "https://doi.org/10.3390/app12136451"
   },
+  // ── 2017 ────────────────────────────────────────────────────────────────────
   {
-    status: "wip", tags: ["wip","xai","kg"],
-    accent: "#9a7abf",
-    venue: "Technovation / TOIS",
-    badge: "In Progress",
-    title: "Designing for Trust: KG-Conditioned Explanations for Accountable Conversational AI",
-    desc: "Work in progress. Details available upon request.",
-    meta: "WIP · Target Technovation/TOIS",
-    link: null
-  },
-  {
-    status: "wip", tags: ["wip","xai","kg"],
-    accent: "#9a7abf",
-    venue: "Information Sciences / TOIS",
-    badge: "In Progress",
-    title: "Beyond Correct Citations in KG-RAG: SMILE-CF Faithfulness Auditing",
-    desc: "Work in progress. Details available upon request.",
-    meta: "WIP · Target Information Sciences",
-    link: null
-  },
-  {
-    status: "wip", tags: ["wip","kg"],
-    accent: "#9a7abf",
-    venue: "JBR Insights",
-    badge: "In Progress",
-    title: "GraphRAG as a Research Copilot for Cumulative Theory Development",
-    desc: "Work in progress. Details available upon request.",
-    meta: "WIP · Target JBR Insights",
-    link: null
-  },
-  {
-    status: "wip", tags: ["wip","xai"],
-    accent: "#9a7abf",
-    venue: "Entrepreneurship Theory & Practice",
-    badge: "In Progress",
-    title: "AI & Entrepreneurship: A Bibliometric Analysis",
-    desc: "Work in progress. Details available upon request.",
-    meta: "WIP · Target ETP",
+    tags: ["finance"],
+    accent: "#7aaa8a",
+    venue: "International Journal of Economics Behavior and Organization",
+    badge: "Journal · 2017",
+    title: "Modelling the Sensitivity of Zimbabwean Commercial Banks' Non-Performing Loans to Macroeconomic Variables",
+    desc: "Models the macroeconomic determinants of non-performing loan (NPL) sensitivity in Zimbabwean commercial banks. Identifies which macroeconomic variables — including GDP growth, inflation, and exchange rate movements — have the greatest influence on credit risk in a sub-Saharan African banking context.",
+    meta: "IJEBO · 2017",
     link: null
   },
 ];
@@ -735,10 +764,9 @@ const pubs = [
 const grid = document.getElementById('pubGrid');
 pubs.forEach((p, i) => {
   const card = document.createElement('div');
-  card.className = 'pub-card reveal';
+  card.className = 'pub-card';
   card.dataset.tags = p.tags.join(' ');
   card.style.setProperty('--accent', p.accent);
-  card.style.animationDelay = `${i * 0.05}s`;
   card.innerHTML = `
     <div class="pub-header">
       <span class="pub-venue">${p.venue}</span>
@@ -750,6 +778,7 @@ pubs.forEach((p, i) => {
     ${p.link ? `<a href="${p.link}" class="pub-link" target="_blank">Read Paper ↗</a>` : ''}
   `;
   grid.appendChild(card);
+  revealObserver.observe(card);
 });
 
 // ── Filter ─────────────────────────────────────────────────────────────────
@@ -760,15 +789,18 @@ document.querySelectorAll('.f-btn').forEach(btn => {
     const f = btn.dataset.filter;
     document.querySelectorAll('.pub-card').forEach(card => {
       const tags = card.dataset.tags;
-      card.classList.toggle('hidden', f !== 'all' && !tags.includes(f));
+      const hide = f !== 'all' && !tags.includes(f);
+      card.classList.toggle('hidden', hide);
+      // ensure visible cards are fully shown
+      if (!hide) {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }
     });
   });
 });
 
-// Scroll reveal on page elements
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08 });
+// Scroll reveal — static elements
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
 </body>
