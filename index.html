@@ -335,6 +335,20 @@
       color: var(--green); font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
     }
     .project-actions a:hover { color: var(--paper); }
+    .project-downloads {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px; margin-top: 24px;
+    }
+    .project-downloads-label {
+      grid-column: 1 / -1; color: var(--muted); font-size: 9px;
+      letter-spacing: .18em; text-transform: uppercase; margin-bottom: 2px;
+    }
+    .project-download {
+      display: block; padding: 10px 12px; border: 1px solid var(--border);
+      color: var(--paper) !important; font-size: 9px !important;
+      letter-spacing: .12em !important; text-transform: uppercase;
+    }
+    .project-download:hover { border-color: var(--green); background: rgba(122,170,138,.08); }
 
     /* ── SKILLS ───────────────────────────────────────── */
     #skills { background: var(--deep); }
@@ -664,6 +678,15 @@
         </p>
         <div class="project-meta">
           <span>Python</span><span>LaTeX</span><span>Linux + Windows</span>
+        </div>
+        <div class="project-downloads">
+          <p class="project-downloads-label">Downloads</p>
+          <a class="project-download" href="https://github.com/ksauka/suvhlatex/releases/download/v0.1.3/suvhlatex_0.1.3_all.deb" target="_blank">Linux · Debian</a>
+          <a class="project-download" href="https://github.com/ksauka/suvhlatex/releases/download/v0.1.3/suvhlatex-0.1.3-x86_64.AppImage" target="_blank">Linux · AppImage</a>
+          <a class="project-download" href="https://github.com/ksauka/suvhlatex/releases/download/v0.1.3/suvhlatex-0.1.3-windows-x64-setup.exe" target="_blank">Windows · Installer</a>
+          <a class="project-download" href="https://github.com/ksauka/suvhlatex/releases/download/v0.1.3/suvhlatex-0.1.3-windows-x64.zip" target="_blank">Windows · Portable</a>
+          <a class="project-download" href="https://miktex.org/download" target="_blank">LaTeX · MiKTeX</a>
+          <a class="project-download" href="https://www.tug.org/texlive/windows.html" target="_blank">LaTeX · TeX Live</a>
         </div>
         <div class="project-actions">
           <a href="https://github.com/ksauka/suvhlatex" target="_blank">Repository ↗</a>
